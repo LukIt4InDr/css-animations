@@ -1,13 +1,43 @@
+section {
+    display: flex;
+    gap: 16px;
+    border: 1px solid black;
+    padding: 32px;
+}
+
 .pulse {
     width: 50px;
     height: 50px;
-    background: #09f;
+    background: red;
     border-radius: 50%;
-    position: relative;
+    /* position: relative; */
+    transition-duration: 1s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
 }
 
-.pulse:hover {
-    scale: 2;
+section:hover .pulse {
+    scale: 1.3;
+    background: purple;
+    box-shadow: 0 0 10px purple;
+}
+
+.pulse:first-child {
+    transition-delay: 0s;
+}
+
+.pulse:nth-child(2) {
+    transition-delay: 300ms;
+}
+
+.pulse:nth-child(3){
+    transition-delay: 600ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pulse {
+        transition: none;
+    }
 }
 
 body {
