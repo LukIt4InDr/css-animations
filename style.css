@@ -13,7 +13,7 @@ h1 {
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
 
     animation: header linear both;
     animation-timeline: scroll(root block);
@@ -27,6 +27,7 @@ section {
 }
 
 section img {
+    position: relative;
     border-radius: 4px;
     width: 100%;
     margin-bottom: 16px;
@@ -39,6 +40,7 @@ section img {
 section img:hover {
     scale: 1.2;
     rotate: 20deg;
+    z-index: 1;
 }
 
 @keyframes header {
